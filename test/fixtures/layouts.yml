@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rows: 1
+  columns: 1
+  venue: one
+  seats: one
+
+two:
+  rows: 1
+  columns: 1
+  venue: two
+  seats: two
