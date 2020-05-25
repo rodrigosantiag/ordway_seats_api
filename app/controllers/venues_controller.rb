@@ -1,7 +1,17 @@
 class VenuesController < ApplicationController
   def index
-    venues = Venue.all.order(:name)
+    render jsonapi: Venue.first,
+           include: [:layout]
+  end
 
-    render json: venues, status: 200
+  def find_best_seat
+    number_of_seats = params[:seats].to_i
+    venue = Venue.first
+
+    # get best row for number of seats requested
+    best_places = venue.layout.get_best_seats(number_of_seats)
+
+    render jsonapi: best_places
+
   end
 end

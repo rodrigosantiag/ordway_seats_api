@@ -1,24 +1,23 @@
-# README
+# README Seats API Ordway
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README documents all steps necessary to get the application up and running locally.
 
-Things you may want to cover:
+**Steps:**
 
-* Ruby version
+* Ruby 2.6.1
 
-* System dependencies
+* Rails 6.0.3.1
 
-* Configuration
+* Database MySQL 5.7.30
 
-* Database creation
+* Database creation: `rake db:create`
 
-* Database initialization
+* Database initialization: `rake db:migrate`
 
-* How to run the test suite
+* Populate database with example data: `rake db:seed`
 
-* Services (job queues, cache servers, search engines, etc.)
+* Add to your hosts file your local api address (in this source is 'api.seats.local')
 
-* Deployment instructions
+* Change in config/enviroments/development.rb and config/enviroments/test.rb the following line to you local address: `Rails.application.routes.default_url_options[:host] = 'api.seats.local'` 
 
-* ...
+* Run tests with the following command: `bundle exec spring rspec`
