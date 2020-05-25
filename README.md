@@ -2,13 +2,19 @@
 
 This README documents all steps necessary to get the application up and running locally.
 
+This app is an API made to be consumed by a react frontend application located in https://github.com/rodrigosantiag/ordway_seats_react_interface
+
+The API consists in a seat mapping which gives to user the best seats combination based on the quantity of needed seats.
+
+For example: for a venue with 10 rows and 12 columns with all seats open, the best seat would be A6 (the closest seat to the front and middle).
+
 **Steps:**
 
 * Ruby 2.6.1
 
 * Rails 6.0.3.1
 
-* Database MySQL 5.7.30
+* Database MySQL 5.7.30. In config/database.yml set your database credentials
 
 * Database creation: `rake db:create`
 
