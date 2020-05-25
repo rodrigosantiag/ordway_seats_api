@@ -14,4 +14,11 @@ class VenuesController < ApplicationController
     render jsonapi: best_places
 
   end
+
+  def reset
+    Venue::reset
+
+    render jsonapi: Venue.first,
+           include: [:layout]
+  end
 end

@@ -18,6 +18,8 @@ This README documents all steps necessary to get the application up and running 
 
 * Add to your hosts file your local api address (in this source is 'api.seats.local')
 
-* Change in config/enviroments/development.rb and config/enviroments/test.rb the following line to you local address: `Rails.application.routes.default_url_options[:host] = 'api.seats.local'` 
+* Change in config/enviroments/development.rb and config/enviroments/test.rb the following line to you local address: `Rails.application.routes.default_url_options[:host] = 'api.seats.local:3001'` 
 
 * Run tests with the following command: `bundle exec spring rspec`
+
+* Start rails server on port 3001 (because you will run react interface on port 3000). `rails s -p3001`
